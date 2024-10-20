@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Memory Info",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/memory_info.exe",  // Ensure this path is correct
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,  // Launches an external console for input
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: gcc.exe build active file", // Ensure this matches your task label
+            "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe" // Ensure this is the correct path to gdb
+        }
+    ]
+}
